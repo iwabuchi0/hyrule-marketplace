@@ -5,6 +5,10 @@
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/funcoes.js"></script>
+
     </head>
     <body>
         <h1>Lojinha da Unidade</h1>
@@ -24,19 +28,19 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="img/produto1.jpg" alt="Produto 1" width="200"></imag>
+                        <img src="img/produto1.jpg" alt="Produto 1" width="200">
                     </td>    
                     <td>
                         <div>Six Iconic Items - Zelda - Tears of the Kingdom - Especial Edition</div>
-                        <div>Code: 0110 </div>
-                        <div></div>
+                        <div><span class="produto-item">Code:</span> 0110</div>
                     </td>
-                    <td>1599,99</td> 
+                    <td id="valor_1">R$ 1.599</td> 
                     <td>
-                        <span class="badge bg-danger"><i class="bi bi-dash"></i></span>
-                        0
-                        <span class="badge bg-success"><i class="bi bi-plus"></i></span>
+                        <span class="badge bg-danger" onclick="alterarQtd(1,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_1">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(1,'+')"><i class="bi bi-plus"></i></span>
                     </td>
+                    <td id="total_1">0</td>
                 </tr> 
                 
                 <tr>
@@ -49,12 +53,13 @@
                         <div>Code: 1010 </div>
                         <div></div>
                     </td> 
-                    <td>1399,99</td> 
+                    <td id="valor_2">R$ 1.399</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(2,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_2">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(2,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_2">0</td>
                 </tr>
                 <tr>
                     <td>
@@ -65,12 +70,13 @@
                         <div>Code: 0100 </div>
                         <div></div>
                     </td> 
-                    <td>1250,00</td> 
+                    <td id="valor_3">R$ 1.250</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(3,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_3">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(3,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_3">0</td>
                 </tr>
 
                 </tr>
@@ -83,12 +89,13 @@
                         <div>Code: 0100 </div>
                         <div></div>
                     </td> 
-                    <td>1250,00</td> 
+                    <td id="valor_4">R$ 1.250</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(4,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_4">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(4,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_4">0</td>
                 </tr>
                 </tr>
                 <tr>
@@ -100,12 +107,13 @@
                         <div>Code: 0100 </div>
                         <div></div>
                     </td> 
-                    <td>1250,00</td> 
+                    <td id="valor_5">R$ 1.250</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(5,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_5">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(5,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_5">0</td>
                 </tr>
                 <tr>
                     <td>
@@ -116,12 +124,13 @@
                         <div>Code: 0110 </div>
                         <div></div>
                     </td>
-                    <td>1599,99</td> 
+                    <td id="valor_6">R$ 1.599</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(6,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_6">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(6,'+')"><i class="bi bi-plus"></i></span>
                     </td>
+                    <td id="total_6">0</td>
                 </tr> 
                 <tr>
                     <td>
@@ -132,12 +141,13 @@
                         <div>Code: 1010 </div>
                         <div></div>
                     </td> 
-                    <td>1399,99</td> 
+                    <td id="valor_7">R$ 1.399</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(7,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_7">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(7,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_7">0</td>
                 </tr>
                 <tr>
                     <td>
@@ -148,18 +158,19 @@
                         <div>Code: 0100 </div>
                         <div></div>
                     </td> 
-                    <td>1250,00</td> 
+                    <td id="valor_8">R$ 1.250</td> 
                     <td>
-                        <span class="badge text-bg-secondary">-</span></h1>
-                        0
-                        <span class="badge text-bg-secondary">+</span></h1>
+                        <span class="badge bg-danger" onclick="alterarQtd(8,'-')"><i class="bi bi-dash"></i></span>
+                        <span id="qtd_8">0</span>
+                        <span class="badge bg-success" onclick="alterarQtd(8,'+')"><i class="bi bi-plus"></i></span>
                     </td> 
+                    <td id="total_8">0</td>
                 </tr>
             </tbody>
 
         </table>
         <footer>
-            <span>Subtotal: R$0</span>
+            <span><i class="bi bi-cart-check"></i>Subtotal:<span id="subtotal"> R$ 0</span></span>
         </footer>
     </body>
 </html>
